@@ -7,7 +7,7 @@
 #include <eigen3/Eigen/Dense>
 #include <sensor_msgs/Imu.h>
 #include <nav_msgs/Odometry.h>
-#include <MSCKF_ADR/math_functions.h>
+#include <msckf/math_functions.h>
 
 // This header file includes all of the libraries as well as declaring all of the functions
 // and variables used in the program. The actual content of the functions are in make_data.cpp
@@ -25,10 +25,7 @@ public:
 
     void imuCallback(const sensor_msgs::Imu::ConstPtr& imuMsg);
 
-    void integrate_state();
-
-    Eigen::Matrix3d skew_symm(Eigen::Vector3d vector);
-
+    Eigen::VectorXd integrate_state(Eigen::VectorXd state);
     // void update();
 
     // void publish();

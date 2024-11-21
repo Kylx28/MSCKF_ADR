@@ -1,0 +1,6 @@
+<launch>
+
+      
+    <node pkg="kalman_filter_tutorial" type="kalman_filter_tutorial_node" name="kalman_filter_tutorial_node" output="screen"/>
+
+</launch>
